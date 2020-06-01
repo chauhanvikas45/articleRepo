@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "7526fcc6-495b-41d6-a244-7cbf4d7b6e2a",
+		"name": "book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8888/api/articles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"title\",\n\t\"description\":\"description\",\n\t\"body\":\"bodynew\",\n\t\"tags\":[\"A\",\"b\",\"C\",\"d\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/api/articles"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/articles/9886605a-80c5-4bf8-a172-4e17c9a6776d",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"description\":\"this is testing data\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/api/articles/9886605a-80c5-4bf8-a172-4e17c9a6776d"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/articles?page=0&size=9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8888/api/articles?page=0&size=9",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8888/api/articles/tags"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/articles/aaae9d90-ed61-4738-a06d-d6181fa2df05/timetoread",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8888/api/articles/aaae9d90-ed61-4738-a06d-d6181fa2df05/timetoread"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/articles/d82db3e0-c316-47d0-bd0f-6011d46dddba",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"title\",\n\t\"description\":\"description\",\n\t\"body\":\"body\",\n\t\"tags\":[\"a\",\"b\",\"c\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/api/articles/d82db3e0-c316-47d0-bd0f-6011d46dddba"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
